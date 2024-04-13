@@ -1,0 +1,25 @@
+package junit;
+
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Before;
+import org.junit.BeforeClass;
+
+public class JUnitHelloWorldTest {
+
+	@BeforeClass
+	public static void beforeClass() {
+		System.out.println("Before Class");
+	}
+
+	@Before
+	public void before() {
+		System.out.println("Before Test Case");
+	}
+
+	public void isGreaterTest() {
+		System.out.println("Test");
+		JUnitHelloWorld helloWorld = new JUnitHelloWorld();
+		assertTrue("Num1 is greater than Num2", helloWorld.isGreater(4, 2));
+	}
+}
