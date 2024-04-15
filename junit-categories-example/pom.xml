@@ -19,9 +19,44 @@
 						<version>2.17</version>
 					</dependency>
 				</dependencies>
+				<configuration>
+					<groups>${testcase.groups}</groups>
+					<excludes>
+						<exclude>${exclude.tests}</exclude>
+					</excludes>
+					<includes>
+						<include>${include.tests}</include>
+					</includes>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
+	<profiles>
+		<profile>
+			<id>sanityTests</id>
+			<properties>
+				<testcase.groups>com.tgomes.junit.cat.intf.SanityTests</testcase.groups>
+			</properties>
+		</profile>
+		<profile>
+			<id>functionalGroupTests1</id>
+			<properties>
+				<testcase.groups>com.tgomes.junit.cat.intf.FunctionalGroupTests1</testcase.groups>
+			</properties>
+		</profile>
+		<profile>
+			<id>functionalGrouTests2</id>
+			<properties>
+				<testcase.groups>com.tgomes.junit.cat.intf.FunctionalGroupTests2</testcase.groups>
+			</properties>
+		</profile>
+		<profile>
+			<id>integrationTests</id>
+			<properties>
+				<testcase.groups>com.tgomes.junit.cat.intf.IntegrationTests</testcase.groups>
+			</properties>
+		</profile>
+	</profiles>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
