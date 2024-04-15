@@ -1,5 +1,6 @@
 package svc;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import intf.AccountService;
@@ -36,8 +37,13 @@ public class AccountServiceImpl implements AccountService {
 
 	@Override
 	public List<Transaction> listAllTransactions(Account account) {
-		// TODO Auto-generated method stub
-		return null;
+		// accountDao.loadAllTransactions(account);
+		List<Transaction> listOfAllTransactions = new ArrayList();
+		listOfAllTransactions.add(new Transaction());
+		listOfAllTransactions.add(new Transaction());
+		listOfAllTransactions.add(new Transaction());
+		account.setTransactions(listOfAllTransactions);
+		return listOfAllTransactions;
 	}
 
 }
