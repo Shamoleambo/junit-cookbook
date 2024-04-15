@@ -10,8 +10,10 @@ public class AccountServiceImpl implements AccountService {
 
 	@Override
 	public Account createNewAccount(Account account) {
-		// TODO Auto-generated method stub
-		return null;
+		// Dummy DAO. Database insert here
+		// accountDao.insert(account);
+		// Ultimately return the account with the modification
+		return account;
 	}
 
 	@Override
