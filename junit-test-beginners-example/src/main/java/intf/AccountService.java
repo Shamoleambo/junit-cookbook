@@ -1,5 +1,7 @@
 package intf;
 
+import java.util.List;
+
 import obj.Account;
 import obj.Transaction;
 
@@ -9,7 +11,7 @@ public interface AccountService {
 
 	Account updateAccount(Account account);
 
-	Account removeAccount(Account account);
+	Boolean removeAccount(Account account);
 
-	Transaction listAllTransactions(Account account);
+	List<Transaction> listAllTransactions(Account account);
 }

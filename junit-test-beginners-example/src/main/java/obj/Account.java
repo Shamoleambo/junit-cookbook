@@ -1,10 +1,12 @@
 package obj;
 
+import java.util.List;
+
 public class Account {
 
 	private String name;
 	private String description;
-	private Transaction transactions;
+	private List<Transaction> transactions;
 
 	public String getName() {
 		return name;
@@ -22,11 +24,11 @@ public class Account {
 		this.description = description;
 	}
 
-	public Transaction getTransactions() {
+	public List<Transaction> getTransactions() {
 		return transactions;
 	}
 
-	public void setTransactions(Transaction transactions) {
+	public void setTransactions(List<Transaction> transactions) {
 		this.transactions = transactions;
 	}
 

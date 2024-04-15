@@ -1,5 +1,7 @@
 package svc;
 
+import java.util.List;
+
 import intf.AccountService;
 import obj.Account;
 import obj.Transaction;
@@ -19,13 +21,13 @@ public class AccountServiceImpl implements AccountService {
 	}
 
 	@Override
-	public Account removeAccount(Account account) {
+	public Boolean removeAccount(Account account) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Transaction listAllTransactions(Account account) {
+	public List<Transaction> listAllTransactions(Account account) {
 		// TODO Auto-generated method stub
 		return null;
 	}
