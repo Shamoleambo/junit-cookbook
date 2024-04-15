@@ -20,4 +20,15 @@ public class JUnitTestCategoryExample {
 		assertTrue(numberInLoop.getClass() == Integer.class);
 	}
 
+	@Test
+	@Category(FunctionalGroupTests1.class)
+	public void testFunctionalTest1Test2() {
+		Integer numberInLoop = 0;
+		for (int i = 0; i < 4000; i++)
+			numberInLoop++;
+
+		System.out.println("FunctionalGroupTests1: testFunctionalTests1Test2");
+		assertTrue(numberInLoop.getClass() == Integer.class);
+	}
+
 }
