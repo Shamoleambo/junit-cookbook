@@ -18,8 +18,11 @@ public class AccountServiceImpl implements AccountService {
 
 	@Override
 	public Account updateAccount(Account account) {
-		// TODO Auto-generated method stub
-		return null;
+		// Dummy DAO. Database insert here
+		// accountDao.update(account);
+		// Ultimately return the account with the modification
+		account.setName("Alvin Reyes: New Name");
+		return account;
 	}
 
 	@Override
